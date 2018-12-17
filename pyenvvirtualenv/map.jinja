@@ -1,0 +1,6 @@
+{%- load_yaml as base_config %}
+pyenvvirtualenv:
+  git_repo: https://github.com/pyenv/pyenv-virtualenv.git
+  install_folder: plugins/pyenv-virtualenv
+{%- endload %}
+{%- set config = salt['pillar.get']('pyenvvirtualenv', base_config.pyenvvirtualenv, merge=true) %}
